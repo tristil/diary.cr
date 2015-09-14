@@ -1,15 +1,12 @@
-require "../lib/ruby"
-require "../lib/diary"
+require "../src/diary"
 
-diary = Diary.new
-
-puts ARGV[0].inspect
+diary = Diary::Diary.new
 
 exit unless ARGV.length > 0
 
 case ARGV[0]
 when "new"
-  diary.create_entry(ARGV[1])
+  diary.create_entry
 when "finish"
   diary.publish_entry
 end

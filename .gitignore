@@ -1,2 +1,7 @@
-.crystal
-diary/
+/.deps/
+/libs/
+/.crystal/
+/doc/
+/bin/diary
+
+
