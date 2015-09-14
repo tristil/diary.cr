@@ -9,4 +9,6 @@ when "new"
   diary.create_entry
 when "finish"
   diary.publish_entry
+else
+  raise ArgumentError.new("Unknown command #{ARGV[0]}")
 end
