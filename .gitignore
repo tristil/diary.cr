@@ -3,5 +3,6 @@
 /.crystal/
 /doc/
 /bin/diary
+/.shards
 
 

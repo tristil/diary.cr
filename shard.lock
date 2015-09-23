@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  ruby-to-crystal-shim:
+    github: tristil/ruby-to-crystal-shim
+    commit: fa86b7aee721a45d6d32c3a7e010814d6b28f320
+

@@ -1,8 +1,9 @@
-require "../src/diary"
+require "../libs/ruby-to-crystal-shim"
+require "../src/diary/diary"
 
 diary = Diary::Diary.new
 
-exit unless ARGV.length > 0
+exit unless ARGV.size > 0
 
 case ARGV[0]
 when "new"
