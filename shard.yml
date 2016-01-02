@@ -4,9 +4,4 @@ version: 0.1.0
 authors:
   - Joseph Method <tristil@gmail.com>
 
-dependencies:
-  ruby-to-crystal-shim:
-    github: tristil/ruby-to-crystal-shim
-    branch: master
-
 license: MIT
