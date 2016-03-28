@@ -1,8 +1,6 @@
 require "../src/diary"
 
-diary = Diary::Manager.new
-
-exit unless ARGV.size > 0
+manager = Diary::Manager.new
 
 case ARGV[0]?
 when nil
@@ -12,11 +10,11 @@ when nil
    - finish
   TEXT
 when "new"
-  diary.create_entry
+  manager.create_entry
 when "list"
-  diary.list_entries
+  manager.list_entries
 when "finish"
-  diary.publish_entry
+  manager.publish_entry
 else
   raise ArgumentError.new("Unknown command #{ARGV[0]}")
 end
