@@ -2,6 +2,10 @@ require "./entry"
 
 module Diary
   class Manager
+    def initialize
+      @entries = [] of Entry
+    end
+
     def entries_directory
       @entries_directory ||= File.expand_path(File.join(ENV["HOME"], ".diary"))
     end
@@ -30,7 +34,11 @@ module Diary
     end
 
     def entries
-      @entries ||= Dir["#{entries_directory}/*"].map { |file| Entry.new(file) }
+      if @entries.empty?
+        @entries = Dir["#{entries_directory}/*"].map { |file| Entry.new(file) }
+      else
+        @entries
+      end
     end
 
     def list_entries

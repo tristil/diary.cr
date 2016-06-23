@@ -4,6 +4,8 @@ module Diary
 
     getter :file
 
+    @file : String
+
     def initialize(@file)
     end
 
